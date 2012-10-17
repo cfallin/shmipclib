@@ -1,0 +1,13 @@
+shmipclib is a very simple shared-memory IPC wrapper that provides very fast
+userspace message passing over shared memory segments, synchronized only by
+spinlocks. This allows two or more processes (or threads) to communicate
+without going through the kernel when they run simultaneously on two different
+cores.
+
+To use shmipclib, simply:
+
+1. Include shm.h in your application.
+
+2. Add "-lrt" to your linker (library) options.
+
+shmipclib should work on x86-64 Linux.
